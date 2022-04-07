@@ -34,6 +34,9 @@ header {
     justify-content: flex-end;
     align-items: center;
     height: 100px;
+    position: fixed;
+    right: 20%;
+    z-index: 100;
 }
 
 header nav ul {
@@ -61,7 +64,8 @@ header nav ul li a:hover {
 }
 
 #outdoor {
-    height: 480px;
+    grid-area: outdoor;
+    height: 600px;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -69,8 +73,19 @@ header nav ul li a:hover {
 }
 
 #outdoor h1 {
-    font-size: 2rem;
+    font-size: 2.25rem;
     font-weight: 300;
+}
+
+.image-outdoor {
+    background-image: url("/public/outdoor.png");
+    background-size: 50%;
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 40%;
+    height: 40%;
+    right: 3%;
+    top: 20%;
 }
 
 #outdoor p {
@@ -104,15 +119,72 @@ header nav ul li a:hover {
 
 #about {
     grid-area: about;
-    height: 360px;
+    height: 480px;
     display: flex;
     align-items: center;
+    justify-content: space-around;
     flex-direction: column;
-    justify-content: space-evenly;
+}
+
+.image-about {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+#about h1 {
+    font-size: 2.25rem;
+    padding-bottom: 2em;
+}
+
+#about p {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-bottom: 3em;
+    justify-content: space-around;
+}
+
+.element-about {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+#about h3 {
+    display: flex;
+    justify-content: center;
 }
 
 #project {
     grid-area: project;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #00DF5E;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 32px;
+}
+
+.layout-project {
+    border: #FFFF solid 1px;
+    width: 25%;
+    height: 270px;
+    background-color: #828282;
+}
+
+#project h1 {
+    font-size: 2.25rem;
+    margin: 25px;
 }
 
 #services {
